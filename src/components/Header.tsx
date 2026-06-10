@@ -10,6 +10,7 @@ const navItems = [
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
   { href: "/ad-tech", label: "Ad Technology" },
+  { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -55,7 +56,8 @@ export default function Header() {
               key={item.href}
               href={item.href}
               className={`rounded-lg px-3.5 py-2 text-sm font-medium transition-all ${
-                pathname === item.href
+                pathname === item.href ||
+                (item.href === "/blog" && pathname.startsWith("/blog"))
                   ? "bg-brand-50 text-brand-700"
                   : "text-slate-600 hover:bg-slate-100 hover:text-brand-600"
               }`}
@@ -79,7 +81,8 @@ export default function Header() {
             key={item.href}
             href={item.href}
             className={`whitespace-nowrap rounded-full px-3 py-1.5 text-xs font-medium ${
-              pathname === item.href
+              pathname === item.href ||
+              (item.href === "/blog" && pathname.startsWith("/blog"))
                 ? "bg-brand-100 text-brand-700"
                 : "text-slate-600"
             }`}

@@ -39,6 +39,9 @@ export default function Footer() {
               <Link href="/ad-tech" className="hover:text-white">
                 Ad Technology
               </Link>
+              <Link href="/blog" className="hover:text-white">
+                Blog
+              </Link>
               <Link href="/contact" className="hover:text-white">
                 Contact
               </Link>
